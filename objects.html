@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+
+        //1st way
+        var person = {
+            firstName: "Anik",
+            lastName: 'Acharjee',
+            age: 30
+        };
+
+        document.write(person.firstName + " " + person.lastName);
+
+        //2nd way
+        var patient = new Object();
+        patient.pid = "P001";
+        patient.pname = "Raj Kumar";
+        document.write("<br/>" + patient.pid + " " + patient.pname);
+        document.write("<br/>" + "The patient name is :- " + patient.pname);
+
+        //3rd way
+        var employ = {eid: "E001", ename: "Mrs. Singh"};
+        var x = employ;
+        x.ename = "Mrs Das";
+        document.write(x.ename);
+
+        function Person(first, last, age) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+        }
+
+        var myFather = new Person("Ram", "Kumar", 50);
+        document.write("<br/>" + "My Father's age is :- " +myFather.age);
+
+    </script>
+</body>
+</html>
